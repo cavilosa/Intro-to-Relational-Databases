@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 
+#
 # A buggy web service in need of a database.
 
 from flask import Flask, request, redirect, url_for
@@ -38,7 +38,10 @@ HTML_WRAP = '''\
 
 # HTML template for an individual comment
 POST = '''\
-    <div class=post><em class=date>%s</em><br>%s</div>
+    <div class=post>
+        <em class=date>%s</em>
+        <br>%s
+    </div>
 '''
 
 
@@ -60,4 +63,3 @@ def post():
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=8000)
-
